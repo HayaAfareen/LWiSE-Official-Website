@@ -2,7 +2,7 @@
    Sheets ID: 19gik8ISnFIyHxvZQLUjECQUeLr8Wv2e86sfhIH_hTfI
 */
 
-const SCRIPT_URL_M = 'YOUR_GOOGLE_APPS_SCRIPT_DEPLOYMENT_URL_HERE';
+const SCRIPT_URL_M = 'https://script.google.com/macros/s/AKfycbzJeivr4ETpUNvCFa1hdV4XyOAEdTGroy-Nsr6oe9QN3V9HYd4wUk7Tu-_xv-PqtslR/exec';
 
 const memGrid = document.getElementById('memGrid');
 const noMems  = document.getElementById('noMems');

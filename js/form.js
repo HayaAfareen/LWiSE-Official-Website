@@ -3,7 +3,7 @@
    Replace SCRIPT_URL after deploying Apps Script as Web App.
 */
 
-const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_DEPLOYMENT_URL_HERE';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJeivr4ETpUNvCFa1hdV4XyOAEdTGroy-Nsr6oe9QN3V9HYd4wUk7Tu-_xv-PqtslR/exec';
 
 // ── MEMBERSHIP FORM
 const memberForm = document.getElementById('memberForm');
