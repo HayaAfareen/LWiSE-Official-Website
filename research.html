@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research — LWiSE</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
 <body>
-<div class="y2k-stars" id="y2kStars"></div>
-
-<nav class="nav scrolled" id="mainNav">
+<nav class="nav scrolled" id="Nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>LWiSE</a>
+    <a href="index.html" class="nav__logo"><span class="nav__logo-gem"></span>LWiSE</a>
     <ul class="nav__links">
       <li><a href="index.html#about" class="nav__link">About</a></li>
       <li><a href="events.html" class="nav__link">Events</a></li>
@@ -22,88 +19,69 @@
       <li><a href="team.html" class="nav__link">Team</a></li>
       <li><a href="members.html" class="nav__link">Members</a></li>
     </ul>
-    <a href="join.html" class="btn btn--primary nav__cta" style="display:none;">Join LWiSE</a>
-    <button class="nav__hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+    <div class="nav__cta-wrap"><a href="join.html" class="btn btn-ink">Join LWiSE</a></div>
+    <button class="nav__ham" id="NavHam"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<div class="nav__mobile" id="navMobile">
-  <button class="nav__close" id="navClose">✕</button>
-  <a href="index.html#about" class="nav__link">About</a>
-  <a href="events.html" class="nav__link">Events</a>
-  <a href="research.html" class="nav__link">Research</a>
-  <a href="opportunities.html" class="nav__link">Opportunities</a>
-  <a href="team.html" class="nav__link">Team</a>
-  <a href="members.html" class="nav__link">Members</a>
-  <a href="join.html" class="btn btn--primary">Join LWiSE</a>
+<div class="nav__mob" id="NavMob">
+  <button class="nav__mob-close" id="NavClose">✕</button>
+  <a href="index.html#about" class="nav__link">About</a><a href="events.html" class="nav__link">Events</a>
+  <a href="research.html" class="nav__link">Research</a><a href="opportunities.html" class="nav__link">Opportunities</a>
+  <a href="team.html" class="nav__link">Team</a><a href="members.html" class="nav__link">Members</a>
 </div>
 
-<!-- HERO -->
-<section class="page-hero" style="background:linear-gradient(135deg,#EDE7FF 0%,var(--blush) 100%);">
-  <div class="container">
-    <div class="page-hero__content">
-      <span class="eyebrow">Research &amp; Publications</span>
-      <h1>Research has no gender.</h1>
-      <p style="max-width:56ch;margin:1rem auto 0;opacity:0.8;font-size:1.05rem;">
-        LWiSE believes research should not feel inaccessible. We create pathways — competitions, training, publications, and resources — to bring women into research.
-      </p>
-    </div>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="label" style="display:block;margin-bottom:1.5rem;">Research &amp; Publications</span>
+    <h1>Research has no gender.</h1>
+    <p style="max-width:54ch;">LWiSE creates pathways — competitions, training, publications, and resources — to bring women into research.</p>
   </div>
 </section>
 
 <!-- COMPETITION FEATURE -->
-<section class="section" style="background:var(--cream);">
-  <div class="container">
-    <div class="section-header fade-up" style="max-width:780px;">
-      <div class="initiative__tag" style="display:inline-block;background:var(--butter);color:var(--plum);font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.8rem;border-radius:50px;margin-bottom:var(--space-lg);">✦ FLAGSHIP INITIATIVE 2026</div>
+<section class="sec sec--off">
+  <div class="wrap">
+    <div class="sec-hd up" style="max-width:720px;margin-bottom:3rem;">
+      <span class="chip chip-butter" style="margin-bottom:1.5rem;display:inline-block;">✦ Flagship Initiative 2026</span>
       <h2>All-Women National Research Article Competition</h2>
-      <p style="margin-top:1rem;font-size:1rem;">
-        Organized by LWiSE in collaboration with the Syed Babar Ali School of Science and Engineering (SBASSE), LUMS, and The Particle Magazine.
-      </p>
+      <p style="margin-top:1rem;">Organized by LWiSE in collaboration with SBASSE, LUMS and The Particle Magazine — making scientific research and academic writing accessible to young women across Pakistan.</p>
     </div>
 
-    <!-- Big stats -->
-    <div class="grid-4" style="margin-top:var(--space-xl);margin-bottom:var(--space-2xl);">
-      <div style="text-align:center;padding:var(--space-xl);background:var(--blush);border-radius:var(--radius-lg);">
-        <div style="font-family:var(--font-display);font-size:3rem;font-weight:700;color:var(--plum);">50+</div>
-        <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--plum);opacity:0.7;">National Applicants</div>
+    <div class="g4 up" style="margin-bottom:3rem;">
+      <div style="background:var(--butter);border-radius:var(--r-lg);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-serif);font-size:3rem;font-weight:700;color:var(--ink);">50+</div>
+        <div style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;margin-top:0.25rem;">National Applicants</div>
       </div>
-      <div style="text-align:center;padding:var(--space-xl);background:var(--lilac);border-radius:var(--radius-lg);">
-        <div style="font-family:var(--font-display);font-size:3rem;font-weight:700;color:var(--plum);">30+</div>
-        <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--plum);opacity:0.7;">Students Trained</div>
+      <div style="background:var(--pink);border-radius:var(--r-lg);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-serif);font-size:3rem;font-weight:700;color:var(--ink);">30+</div>
+        <div style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;margin-top:0.25rem;">Students Trained</div>
       </div>
-      <div style="text-align:center;padding:var(--space-xl);background:var(--butter);border-radius:var(--radius-lg);">
-        <div style="font-family:var(--font-display);font-size:3rem;font-weight:700;color:var(--plum);">25</div>
-        <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--plum);opacity:0.7;">Submissions</div>
+      <div style="background:var(--butter);border-radius:var(--r-lg);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-serif);font-size:3rem;font-weight:700;color:var(--ink);">25</div>
+        <div style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;margin-top:0.25rem;">Submissions</div>
       </div>
-      <div style="text-align:center;padding:var(--space-xl);background:linear-gradient(135deg,var(--blush),var(--lilac));border-radius:var(--radius-lg);">
+      <div style="background:var(--pink);border-radius:var(--r-lg);padding:2rem;text-align:center;">
         <div style="font-size:2.5rem;">👩‍🔬</div>
-        <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--plum);opacity:0.7;margin-top:0.4rem;">All-Female Panel</div>
+        <div style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;margin-top:0.25rem;">All-Female Panel</div>
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);">
-      <div class="fade-up">
+    <div class="g2 up">
+      <div>
         <h3>Why it matters</h3>
         <p style="margin-top:1rem;">Research feels inaccessible to many students — especially those in their first year or from high school. The competition was not just about finding the best writer. It was about creating a pathway.</p>
-        <p style="margin-top:1rem;">LWiSE did not simply announce a competition. It provided <strong>hands-on research-writing training</strong> to participants first — helping them understand scientific structure, argumentation, and communication before writing a single word.</p>
-        <p style="margin-top:1rem;">Participants included high-school students and first-year undergraduates from across Pakistan — well beyond the LUMS campus.</p>
+        <p style="margin-top:1rem;">LWiSE provided <strong>hands-on research-writing training</strong> before the competition — helping participants understand scientific structure, argumentation, and communication. Participants included high-school students and first-year undergraduates from across Pakistan.</p>
+        <p style="margin-top:1rem;">The competition included a cash prize and the winning article was offered publication in The Particle Magazine — a significant first publishing opportunity for young researchers.</p>
       </div>
-      <div class="fade-up">
+      <div>
         <h3>The pathway</h3>
-        <div class="initiative__timeline" style="margin-top:1rem;">
-          <div class="timeline-step"><div class="timeline-step__num">1</div>📢 Open to all women across Pakistan</div>
-          <div style="height:1px;background:var(--blush);margin:0.3rem 0;"></div>
-          <div class="timeline-step"><div class="timeline-step__num">2</div>📚 Research-writing training provided</div>
-          <div style="height:1px;background:var(--blush);margin:0.3rem 0;"></div>
-          <div class="timeline-step"><div class="timeline-step__num">3</div>✍️ Participants write and submit articles</div>
-          <div style="height:1px;background:var(--blush);margin:0.3rem 0;"></div>
-          <div class="timeline-step"><div class="timeline-step__num">4</div>👩‍🔬 All-female panel evaluation</div>
-          <div style="height:1px;background:var(--blush);margin:0.3rem 0;"></div>
-          <div class="timeline-step"><div class="timeline-step__num">5</div>🏆 Closing symposium &amp; recognition</div>
-          <div style="height:1px;background:var(--blush);margin:0.3rem 0;"></div>
-          <div class="timeline-step"><div class="timeline-step__num">6</div>💰 Cash prize &amp; certificates</div>
-          <div style="height:1px;background:var(--blush);margin:0.3rem 0;"></div>
-          <div class="timeline-step"><div class="timeline-step__num">7</div>📰 Publication in The Particle Magazine</div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;">
+          <div class="init-step" style="background:var(--surface);border-radius:var(--r-md);"><div class="init-step__num" style="background:var(--butter);color:var(--ink);">1</div><div><div style="font-size:0.88rem;font-weight:600;color:var(--ink);">Open call — all women across Pakistan</div></div></div>
+          <div class="init-step" style="background:var(--surface);border-radius:var(--r-md);"><div class="init-step__num" style="background:var(--butter);color:var(--ink);">2</div><div><div style="font-size:0.88rem;font-weight:600;color:var(--ink);">Research-writing training (30+ students)</div></div></div>
+          <div class="init-step" style="background:var(--surface);border-radius:var(--r-md);"><div class="init-step__num" style="background:var(--butter);color:var(--ink);">3</div><div><div style="font-size:0.88rem;font-weight:600;color:var(--ink);">25 article submissions</div></div></div>
+          <div class="init-step" style="background:var(--surface);border-radius:var(--r-md);"><div class="init-step__num" style="background:var(--butter);color:var(--ink);">4</div><div><div style="font-size:0.88rem;font-weight:600;color:var(--ink);">All-female panel evaluation</div></div></div>
+          <div class="init-step" style="background:var(--surface);border-radius:var(--r-md);"><div class="init-step__num" style="background:var(--butter);color:var(--ink);">5</div><div><div style="font-size:0.88rem;font-weight:600;color:var(--ink);">Closing symposium + cash prize</div></div></div>
+          <div class="init-step" style="background:var(--surface);border-radius:var(--r-md);"><div class="init-step__num" style="background:var(--butter);color:var(--ink);">6</div><div><div style="font-size:0.88rem;font-weight:600;color:var(--ink);">Publication in The Particle Magazine</div></div></div>
         </div>
       </div>
     </div>
@@ -111,123 +89,73 @@
 </section>
 
 <!-- THE PARTICLE -->
-<section class="section" style="background:linear-gradient(135deg,#EDE7FF 0%,var(--cream) 100%);">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="eyebrow">Scientific Communication</span>
+<section class="sec sec--butter">
+  <div class="wrap">
+    <div class="sec-hd up" style="margin-bottom:3rem;">
+      <span class="label" style="display:block;margin-bottom:1rem;">Scientific Communication</span>
       <h2>The Particle Magazine</h2>
-      <p style="margin-top:1rem;">The Particle is the science magazine associated with the Syed Babar Ali School of Science and Engineering (SBASSE). LWiSE's collaboration with The Particle gives members a platform to write about science, build scientific communication skills, and get published.</p>
+      <p style="margin-top:1rem;">The Particle is the science magazine of SBASSE, LUMS. LWiSE's collaboration gives members opportunities to write about science, build scientific communication skills, and get published.</p>
     </div>
-    <div class="grid-3" style="margin-top:var(--space-xl);">
-      <div class="pub-card fade-up">
+    <div class="g3">
+      <div class="pub-card up">
         <div class="pub-card__journal">The Particle · 2026</div>
-        <h4 class="pub-card__title">6 LWiSE Student Writers Featured</h4>
-        <p class="pub-card__author">Madiha Rehman · Ayerah Asim · Hazem Asif + more</p>
-        <p style="font-size:0.82rem;opacity:0.7;margin-top:0.5rem;max-width:100%;">The 2026 cohort of LWiSE writers contributed to The Particle Magazine, representing a growing collaboration between LWiSE and scientific publishing.</p>
+        <div class="pub-card__title">6 LWiSE Student Writers Featured</div>
+        <div class="pub-card__author">Madiha Rehman · Ayerah Asim · Hazem Asif + more</div>
+        <p style="font-size:0.82rem;opacity:0.65;margin-top:0.75rem;max-width:100%;">The 2026 cohort represented LWiSE in SBASSE's science magazine, building scientific communication portfolios.</p>
       </div>
-      <div class="pub-card fade-up">
+      <div class="pub-card up">
         <div class="pub-card__journal">Research Competition · 2026</div>
-        <h4 class="pub-card__title">Competition Winners — Publication Opportunity</h4>
-        <p class="pub-card__author">LWiSE × SBASSE × The Particle</p>
-        <p style="font-size:0.82rem;opacity:0.7;margin-top:0.5rem;max-width:100%;">Top articles from the national research competition were offered publication in The Particle Magazine — a significant first publication opportunity for young researchers.</p>
+        <div class="pub-card__title">Competition Winners — Publication Opportunity</div>
+        <div class="pub-card__author">LWiSE × SBASSE × The Particle</div>
+        <p style="font-size:0.82rem;opacity:0.65;margin-top:0.75rem;max-width:100%;">Top articles from the national competition earned a cash prize and publication in The Particle Magazine.</p>
       </div>
-      <div class="pub-card fade-up">
-        <div class="pub-card__journal">2026 — Writer Meetup</div>
-        <h4 class="pub-card__title">LWiSE × The Particle Writer Meetup</h4>
-        <p class="pub-card__author">Community Event</p>
-        <p style="font-size:0.82rem;opacity:0.7;margin-top:0.5rem;max-width:100%;">LWiSE held a meetup for its Particle contributors — building community between women in scientific writing and communications.</p>
+      <div class="pub-card up" style="background:var(--ink);border-color:var(--ink);">
+        <div class="pub-card__journal" style="color:var(--pink);">Want to Write?</div>
+        <div class="pub-card__title" style="color:var(--white);">Join the next cohort of LWiSE science writers</div>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);max-width:100%;margin-top:0.75rem;">Build your scientific communication skills, get published, get recognized.</p>
+        <a href="join.html" class="btn btn-ghost-butter" style="margin-top:1.5rem;font-size:0.82rem;">Express Interest →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- RESOURCE HUB -->
-<section class="section" style="background:var(--blush);">
-  <div class="container">
-    <div class="section-header text-center fade-up">
-      <span class="eyebrow">Resource Hub</span>
+<section class="sec sec--off">
+  <div class="wrap">
+    <div class="sec-hd up" style="margin-bottom:3rem;">
+      <span class="label" style="display:block;margin-bottom:1rem;">Resource Hub</span>
       <h2>Research should not feel inaccessible.</h2>
-      <p style="margin:auto;margin-top:1rem;">LWiSE curates free and accessible resources for women interested in research, academic writing, and STEM learning.</p>
+      <p style="margin-top:1rem;">LWiSE curates free and accessible resources for women interested in research, academic writing, and STEM learning.</p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:var(--space-md);margin-top:var(--space-xl);">
-      <div class="resource-card fade-up">
-        <div class="resource-card__icon">🔬</div>
-        <div class="resource-card__body">
-          <div class="resource-card__cat">Research</div>
-          <div class="resource-card__title">Elsevier Researcher Academy</div>
-          <p class="resource-card__desc">Free online modules on research methodology, scientific writing, publishing, and peer review. Ideal for first-time researchers.</p>
-          <a href="https://researcheracademy.elsevier.com/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:0.75rem;font-size:0.8rem;padding:0.5rem 1rem;">Visit Resource →</a>
-        </div>
-      </div>
-      <div class="resource-card fade-up">
-        <div class="resource-card__icon">💻</div>
-        <div class="resource-card__body">
-          <div class="resource-card__cat">Technical · Coding</div>
-          <div class="resource-card__title">Stanford Code in Place</div>
-          <p class="resource-card__desc">Free Python programming course by Stanford instructors. A great entry point for women exploring computer science.</p>
-          <a href="https://codeinplace.stanford.edu/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:0.75rem;font-size:0.8rem;padding:0.5rem 1rem;">Visit Resource →</a>
-        </div>
-      </div>
-      <div class="resource-card fade-up">
-        <div class="resource-card__icon">🧬</div>
-        <div class="resource-card__body">
-          <div class="resource-card__cat">Lab Sciences</div>
-          <div class="resource-card__title">Proteintech Learning Portal</div>
-          <p class="resource-card__desc">Free educational resources on proteomics, antibodies, and laboratory techniques for life sciences students.</p>
-          <a href="https://www.ptglab.com/news/learning-center/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:0.75rem;font-size:0.8rem;padding:0.5rem 1rem;">Visit Resource →</a>
-        </div>
-      </div>
-      <div class="resource-card fade-up">
-        <div class="resource-card__icon">🎓</div>
-        <div class="resource-card__body">
-          <div class="resource-card__cat">Academic</div>
-          <div class="resource-card__title">MIT OpenCourseWare</div>
-          <p class="resource-card__desc">Free access to MIT course materials across engineering, science, mathematics, and computer science. No enrollment required.</p>
-          <a href="https://ocw.mit.edu/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:0.75rem;font-size:0.8rem;padding:0.5rem 1rem;">Visit Resource →</a>
-        </div>
-      </div>
-      <div class="resource-card fade-up">
-        <div class="resource-card__icon">📚</div>
-        <div class="resource-card__body">
-          <div class="resource-card__cat">Academic</div>
-          <div class="resource-card__title">Harvard Online Learning</div>
-          <p class="resource-card__desc">Free and paid courses from Harvard faculty across data science, biology, computer science, and public health.</p>
-          <a href="https://online-learning.harvard.edu/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:0.75rem;font-size:0.8rem;padding:0.5rem 1rem;">Visit Resource →</a>
-        </div>
-      </div>
+    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+      <div class="res-card up"><div class="res-card__icon">🔬</div><div><div class="res-card__cat">Research</div><div class="res-card__title">Elsevier Researcher Academy</div><p class="res-card__desc">Free modules on research methodology, scientific writing, publishing, and peer review.</p><a href="https://researcheracademy.elsevier.com/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.75rem;padding:0.4rem 0.9rem;font-size:0.8rem;">Visit →</a></div></div>
+      <div class="res-card up"><div class="res-card__icon">💻</div><div><div class="res-card__cat">Technical · Coding</div><div class="res-card__title">Stanford Code in Place</div><p class="res-card__desc">Free Python programming course by Stanford instructors. A great entry point for computer science.</p><a href="https://codeinplace.stanford.edu/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.75rem;padding:0.4rem 0.9rem;font-size:0.8rem;">Visit →</a></div></div>
+      <div class="res-card up"><div class="res-card__icon">🧬</div><div><div class="res-card__cat">Lab Sciences</div><div class="res-card__title">Proteintech Learning Portal</div><p class="res-card__desc">Free educational resources on proteomics, antibodies, and laboratory techniques.</p><a href="https://www.ptglab.com/news/learning-center/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.75rem;padding:0.4rem 0.9rem;font-size:0.8rem;">Visit →</a></div></div>
+      <div class="res-card up"><div class="res-card__icon">🎓</div><div><div class="res-card__cat">Academic</div><div class="res-card__title">MIT OpenCourseWare</div><p class="res-card__desc">Free MIT course materials across engineering, science, mathematics, and computer science.</p><a href="https://ocw.mit.edu/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.75rem;padding:0.4rem 0.9rem;font-size:0.8rem;">Visit →</a></div></div>
+      <div class="res-card up"><div class="res-card__icon">📚</div><div><div class="res-card__cat">Academic</div><div class="res-card__title">Harvard Online Learning</div><p class="res-card__desc">Free and paid courses from Harvard faculty across data science, biology, computer science, and public health.</p><a href="https://online-learning.harvard.edu/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.75rem;padding:0.4rem 0.9rem;font-size:0.8rem;">Visit →</a></div></div>
     </div>
-    <p class="text-center" style="margin-top:var(--space-xl);font-size:0.86rem;opacity:0.7;">More resources shared regularly via LWiSE's Instagram and LinkedIn. <a href="#" style="color:var(--plum);font-weight:600;">Follow us.</a></p>
   </div>
 </section>
 
-<section class="section join-section">
-  <div class="container" style="text-align:center;position:relative;z-index:1;">
-    <span class="eyebrow" style="color:var(--blush);">Research Community</span>
-    <h2 style="color:var(--cream);">Want to get involved in research?</h2>
-    <p style="color:rgba(255,255,255,0.65);margin:1rem auto;max-width:48ch;">Join LWiSE. Access research resources, workshops, writing opportunities, and a community of women exploring STEM.</p>
-    <a href="join.html" class="btn btn--cream">Join LWiSE ✦</a>
+<section class="sec sec--ink">
+  <div class="wrap tc">
+    <h2 style="color:var(--white);">Want to get involved in research?</h2>
+    <p style="color:rgba(255,255,255,0.5);margin:1rem auto;max-width:46ch;">Join LWiSE and access research resources, workshops, writing opportunities, and a community of women exploring STEM.</p>
+    <a href="join.html" class="btn btn-butter" style="margin-top:1.5rem;">Join LWiSE ✦</a>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <div class="footer__logo">LWiSE ✦</div>
-        <div class="footer__tagline">LUMS Women in Science and Engineering</div>
-        <div class="footer__socials"><a href="#" class="footer__social">📸</a><a href="#" class="footer__social">💼</a><a href="mailto:lwise@lums.edu.pk" class="footer__social">✉️</a></div>
-      </div>
-      <div><div class="footer__col-header">Explore</div><a href="index.html#about" class="footer__link">About</a><a href="events.html" class="footer__link">Events</a><a href="research.html" class="footer__link">Research</a></div>
-      <div><div class="footer__col-header">Get Involved</div><a href="join.html" class="footer__link">Join</a><a href="members.html" class="footer__link">Members</a></div>
-      <div><div class="footer__col-header">Connect</div><a href="#" class="footer__link">Instagram</a><a href="mailto:lwise@lums.edu.pk" class="footer__link">Email</a></div>
+  <div class="wrap">
+    <div class="footer-top">
+      <div><div class="footer-logo">LWiSE ✦</div><div class="footer-tagline">LUMS Women in Science and Engineering</div><div class="footer-socials"><a href="#" class="footer-soc">📸</a><a href="#" class="footer-soc">💼</a><a href="mailto:lwise@lums.edu.pk" class="footer-soc">✉️</a></div></div>
+      <div><div class="footer-col-hd">Explore</div><a href="index.html#about" class="footer-link">About</a><a href="events.html" class="footer-link">Events</a><a href="research.html" class="footer-link">Research</a></div>
+      <div><div class="footer-col-hd">Get Involved</div><a href="join.html" class="footer-link">Join</a><a href="members.html" class="footer-link">Members</a></div>
+      <div><div class="footer-col-hd">Connect</div><a href="#" class="footer-link">Instagram</a><a href="mailto:lwise@lums.edu.pk" class="footer-link">Email</a></div>
     </div>
-    <div class="footer__bottom">
-      <div class="footer__copyright">© LWiSE 2026–27</div>
-      <div class="footer__y2k">✦ EXPLORE · RESEARCH · CONNECT · LEAD ✦</div>
-    </div>
+    <div class="footer-bottom"><div class="footer-copy">© LWiSE 2026–27</div><div class="footer-mantra">EXPLORE · RESEARCH · CONNECT · LEAD</div></div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>

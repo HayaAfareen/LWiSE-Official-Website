@@ -14,7 +14,7 @@
 
 // ── REPLACE WITH YOUR GOOGLE SHEET ID ────────────────────
 // Sheet URL: https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
-const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID_HERE';
+const SPREADSHEET_ID = '19gik8ISnFIyHxvZQLUjECQUeLr8Wv2e86sfhIH_hTfI';
 
 // ── Sheet tab names
 const MEMBERS_SHEET = 'Members';
