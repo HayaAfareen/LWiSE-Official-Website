@@ -1,6 +1,5 @@
-/* LWiSE — Form JS v2
+/* LWiSE — Form JS v3
    Google Sheets ID: 19gik8ISnFIyHxvZQLUjECQUeLr8Wv2e86sfhIH_hTfI
-   Replace SCRIPT_URL after deploying Apps Script as Web App.
 */
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJeivr4ETpUNvCFa1hdV4XyOAEdTGroy-Nsr6oe9QN3V9HYd4wUk7Tu-_xv-PqtslR/exec';
@@ -14,58 +13,46 @@ if (memberForm) {
   memberForm.addEventListener('submit', async e => {
     e.preventDefault();
 
-    // validate required fields
     let ok = true;
     memberForm.querySelectorAll('[required]').forEach(f => {
-      if (f.type === 'checkbox' ? !f.checked : !f.value.trim()) {
-        f.style.outlineColor = 'var(--pink-deep)';
-        ok = false;
-      } else {
-        f.style.outlineColor = '';
-      }
+      const invalid = f.type === 'checkbox' ? !f.checked : !f.value.trim();
+      f.style.outlineColor = invalid ? 'var(--pink-deep)' : '';
+      if (invalid) ok = false;
     });
     if (!ok) { showToast('Please fill in all required fields.', 'error'); return; }
 
-    const stemFields = [...memberForm.querySelectorAll('input[name="stemFields"]:checked')]
-      .map(cb => cb.value).join(', ');
-
     const data = {
-      type:          'membership',
-      timestamp:     new Date().toISOString(),
-      firstName:     memberForm.fFirst.value.trim(),
-      lastName:      memberForm.fLast.value.trim(),
-      fullName:      `${memberForm.fFirst.value.trim()} ${memberForm.fLast.value.trim()}`,
-      email:         memberForm.fEmail.value.trim(),
-      phone:         memberForm.fPhone.value.trim(),
-      memberType:    memberForm.fMemberType.value,
-      institution:   memberForm.fInst.value.trim(),
-      department:    memberForm.fDept.value,
-      major:         memberForm.fMajor.value.trim(),
-      yearOfStudy:   memberForm.fYear.value,
-      stemFields,
-      lwiseInterest: memberForm.fInterest.value,
-      howHeard:      memberForm.fHeard.value,
-      bio:           memberForm.fBio.value.trim(),
+      type:       'membership',
+      timestamp:  new Date().toISOString(),
+      firstName:  memberForm.fFirst.value.trim(),
+      lastName:   memberForm.fLast.value.trim(),
+      fullName:   `${memberForm.fFirst.value.trim()} ${memberForm.fLast.value.trim()}`,
+      email:      memberForm.fEmail.value.trim(),
+      instagram:  memberForm.fInstagram.value.trim(),
+      position:   memberForm.fPosition.value,
+      department: memberForm.fDept.value,
+      major:      memberForm.fMajor.value.trim(),
     };
 
-    submitBtn.textContent = 'Submitting…';
+    submitBtn.textContent = 'Registering…';
     submitBtn.disabled = true;
 
     try {
-      if (!SCRIPT_URL || SCRIPT_URL.includes('YOUR_GOOGLE')) {
-        saveLocal(data);
-      } else {
-        await fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
-      }
+      await fetch(SCRIPT_URL, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      saveLocal(data);
       memberForm.style.display = 'none';
       fSuccess.classList.add('show');
-      showToast('Welcome to LWiSE! 🎉');
+      showToast('Registered successfully.');
     } catch(err) {
       saveLocal(data);
       memberForm.style.display = 'none';
       fSuccess.classList.add('show');
     } finally {
-      submitBtn.textContent = 'Join LWiSE ✦';
+      submitBtn.textContent = 'Register';
       submitBtn.disabled = false;
     }
   });
@@ -80,10 +67,10 @@ if (collabForm) {
     e.preventDefault();
     let ok = true;
     collabForm.querySelectorAll('[required]').forEach(f => {
-      if (!f.value.trim()) { f.style.outlineColor='var(--pink-deep)'; ok=false; }
-      else f.style.outlineColor='';
+      if (!f.value.trim()) { f.style.outlineColor = 'var(--pink-deep)'; ok = false; }
+      else f.style.outlineColor = '';
     });
-    if (!ok) { showToast('Please fill in all required fields.','error'); return; }
+    if (!ok) { showToast('Please fill in all required fields.', 'error'); return; }
 
     const data = {
       type:       'collaboration',
@@ -99,20 +86,19 @@ if (collabForm) {
     btn.textContent = 'Sending…'; btn.disabled = true;
 
     try {
-      if (!SCRIPT_URL || SCRIPT_URL.includes('YOUR_GOOGLE')) saveLocal(data);
-      else await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-      collabForm.style.display='none'; cSuccess.classList.add('show');
-      showToast('Inquiry sent! We\'ll be in touch. ✦');
+      await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      collabForm.style.display = 'none'; cSuccess.classList.add('show');
+      showToast('Inquiry sent. We\'ll be in touch.');
     } catch(err) {
-      saveLocal(data); collabForm.style.display='none'; cSuccess.classList.add('show');
+      collabForm.style.display = 'none'; cSuccess.classList.add('show');
     } finally {
-      btn.textContent='Send Inquiry ✦'; btn.disabled=false;
+      btn.textContent = 'Send Inquiry'; btn.disabled = false;
     }
   });
 }
 
 function saveLocal(data) {
   const arr = JSON.parse(localStorage.getItem('lwise_members') || '[]');
-  arr.push(data);
-  localStorage.setItem('lwise_members', JSON.stringify(arr));
+  const exists = arr.some(m => m.email === data.email && m.type === data.type);
+  if (!exists) { arr.push(data); localStorage.setItem('lwise_members', JSON.stringify(arr)); }
 }

@@ -1,36 +1,27 @@
 /**
- * LWiSE — Google Apps Script
+ * LWiSE — Google Apps Script v2
  *
  * SETUP:
  * 1. Go to script.google.com → New project
  * 2. Paste this entire file
- * 3. Edit SPREADSHEET_ID below (get it from your Google Sheet URL)
- * 4. Click Deploy → New Deployment → Web App
+ * 3. Click Deploy → New Deployment → Web App
  *    - Execute as: Me
  *    - Who has access: Anyone
- * 5. Copy the Web App URL
- * 6. Paste it in js/form.js as SCRIPT_URL
+ * 4. Copy the Web App URL into js/form.js (SCRIPT_URL) and js/team.js (TEAM_SCRIPT_URL)
  */
 
-// ── REPLACE WITH YOUR GOOGLE SHEET ID ────────────────────
-// Sheet URL: https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
 const SPREADSHEET_ID = '19gik8ISnFIyHxvZQLUjECQUeLr8Wv2e86sfhIH_hTfI';
+const MEMBERS_SHEET  = 'Members';
+const COLLAB_SHEET   = 'Collaborations';
 
-// ── Sheet tab names
-const MEMBERS_SHEET = 'Members';
-const COLLAB_SHEET  = 'Collaborations';
-
-// ── doPost — receives form submissions from the website
+// ── doPost — receives form submissions
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
     const ss   = SpreadsheetApp.openById(SPREADSHEET_ID);
 
-    if (data.type === 'membership') {
-      saveMember(ss, data);
-    } else if (data.type === 'collaboration') {
-      saveCollab(ss, data);
-    }
+    if (data.type === 'membership')    saveMember(ss, data);
+    else if (data.type === 'collaboration') saveCollab(ss, data);
 
     return ContentService
       .createTextOutput(JSON.stringify({ status: 'success' }))
@@ -43,18 +34,16 @@ function doPost(e) {
   }
 }
 
-// ── doGet — returns member list as JSON (for website display)
+// ── doGet — returns data as JSON
 function doGet(e) {
   try {
-    const action = e.parameter.action || 'members';
+    const action = (e.parameter && e.parameter.action) || 'members';
     const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
 
     if (action === 'members') {
       const sheet = getOrCreateSheet(ss, MEMBERS_SHEET, MEMBER_HEADERS);
       const rows  = sheet.getDataRange().getValues();
-      if (rows.length <= 1) {
-        return jsonResponse([]);
-      }
+      if (rows.length <= 1) return jsonResponse([]);
       const headers = rows[0];
       const members = rows.slice(1).map(row => {
         const obj = {};
@@ -71,39 +60,29 @@ function doGet(e) {
   }
 }
 
-// ── MEMBER HEADERS
+// ── MEMBER HEADERS (updated for simplified form)
 const MEMBER_HEADERS = [
   'Timestamp', 'Full Name', 'First Name', 'Last Name',
-  'Email', 'Phone', 'Member Type',
-  'Institution', 'Department', 'Major', 'Year of Study',
-  'STEM Fields', 'LWiSE Interest', 'How Heard', 'Bio'
+  'Email', 'Instagram', 'Position', 'Department', 'Major'
 ];
 
 function saveMember(ss, data) {
   const sheet = getOrCreateSheet(ss, MEMBERS_SHEET, MEMBER_HEADERS);
   sheet.appendRow([
-    data.timestamp    || new Date().toISOString(),
-    data.fullName     || '',
-    data.firstName    || '',
-    data.lastName     || '',
-    data.email        || '',
-    data.phone        || '',
-    data.memberType   || '',
-    data.institution  || '',
-    data.department   || '',
-    data.major        || '',
-    data.yearOfStudy  || '',
-    data.stemFields   || '',
-    data.lwiseInterest|| '',
-    data.howHeard     || '',
-    data.bio          || '',
+    data.timestamp  || new Date().toISOString(),
+    data.fullName   || '',
+    data.firstName  || '',
+    data.lastName   || '',
+    data.email      || '',
+    data.instagram  || '',
+    data.position   || '',
+    data.department || '',
+    data.major      || '',
   ]);
 }
 
 // ── COLLAB HEADERS
-const COLLAB_HEADERS = [
-  'Timestamp', 'Name', 'Organization', 'Email', 'Collaboration Type', 'Message'
-];
+const COLLAB_HEADERS = ['Timestamp', 'Name', 'Organization', 'Email', 'Collaboration Type', 'Message'];
 
 function saveCollab(ss, data) {
   const sheet = getOrCreateSheet(ss, COLLAB_SHEET, COLLAB_HEADERS);
@@ -123,10 +102,9 @@ function getOrCreateSheet(ss, name, headers) {
   if (!sheet) {
     sheet = ss.insertSheet(name);
     sheet.appendRow(headers);
-    // Style header row
     const headerRange = sheet.getRange(1, 1, 1, headers.length);
-    headerRange.setBackground('#4A3158');
-    headerRange.setFontColor('#FFF9F2');
+    headerRange.setBackground('#F5E6A3');
+    headerRange.setFontColor('#1A1118');
     headerRange.setFontWeight('bold');
     sheet.setFrozenRows(1);
   }

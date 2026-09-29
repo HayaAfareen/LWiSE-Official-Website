@@ -5,12 +5,15 @@
   <title>Team — LWiSE</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="icon" href="assets/images/lwise-logo.png">
 </head>
 <body>
 <nav class="nav scrolled" id="Nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo"><span class="nav__logo-gem"></span>LWiSE</a>
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/lwise-logo.png" alt="LWiSE" class="nav__logo-img">
+      <span class="nav__logo-text">LWiSE</span>
+    </a>
     <ul class="nav__links">
       <li><a href="index.html#about" class="nav__link">About</a></li>
       <li><a href="events.html" class="nav__link">Events</a></li>
@@ -25,27 +28,30 @@
 </nav>
 <div class="nav__mob" id="NavMob">
   <button class="nav__mob-close" id="NavClose">✕</button>
-  <a href="index.html#about" class="nav__link">About</a><a href="events.html" class="nav__link">Events</a>
-  <a href="research.html" class="nav__link">Research</a><a href="opportunities.html" class="nav__link">Opportunities</a>
-  <a href="team.html" class="nav__link">Team</a><a href="members.html" class="nav__link">Members</a>
+  <a href="index.html#about" class="nav__link">About</a>
+  <a href="events.html" class="nav__link">Events</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="opportunities.html" class="nav__link">Opportunities</a>
+  <a href="team.html" class="nav__link">Team</a>
+  <a href="members.html" class="nav__link">Members</a>
 </div>
 
 <section class="page-hero">
   <div class="wrap">
     <span class="label" style="display:block;margin-bottom:1.5rem;">2026–27 Leadership</span>
-    <h1>Meet the Team</h1>
-    <p style="max-width:52ch;">The people building the LWiSE ecosystem — working to create community, research opportunities, and pathways for women in STEM.</p>
+    <h1>The Team</h1>
+    <p style="max-width:50ch;">The people building the LWiSE ecosystem — creating community, research opportunities, and pathways for women in STEM.</p>
   </div>
 </section>
 
-<!-- EXECUTIVE COUNCIL -->
+<!-- EXECUTIVE COUNCIL — static, always shown -->
 <section class="sec sec--off">
   <div class="wrap">
-    <div class="sec-hd tc up" style="margin-bottom:3rem;">
+    <div class="sec-hd tc up" style="margin-bottom:2.5rem;">
       <span class="label" style="display:block;margin-bottom:1rem;">Executive Council</span>
       <h2>Leadership</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:800px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:760px;margin:0 auto;">
       <div class="team-card up">
         <div class="team-card__av" style="background:linear-gradient(135deg,var(--butter),var(--pink));">H</div>
         <div class="team-card__body">
@@ -74,32 +80,56 @@
   </div>
 </section>
 
-<!-- DIRECTORATE -->
+<!-- DYNAMIC TEAM — loaded from Google Sheets via join form -->
 <section class="sec sec--butter">
   <div class="wrap">
-    <div class="sec-hd tc up" style="margin-bottom:3rem;">
-      <span class="label" style="display:block;margin-bottom:1rem;">Directorate</span>
-      <h2>Department Leads</h2>
-      <p>Director names will be updated once the 2026–27 directorate is finalized.</p>
+    <div class="sec-hd tc up" style="margin-bottom:2.5rem;">
+      <span class="label" style="display:block;margin-bottom:1rem;">2026–27 Cohort</span>
+      <h2>Team Members</h2>
+      <p id="teamCount" style="margin-top:0.5rem;font-family:var(--font-mono);font-size:0.8rem;letter-spacing:0.08em;color:var(--ink-muted);opacity:0.6;"></p>
     </div>
-    <div class="g3">
-      <div class="dept-card up"><div class="dept-card__icon">🔬</div><h4>Research &amp; Affiliations</h4><p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Research initiatives, competition logistics, academic partnerships, faculty collaborations.</p><div class="dept-card__tba">Director — TBA 2026–27</div></div>
-      <div class="dept-card up"><div class="dept-card__icon">📢</div><h4>Marketing &amp; Outreach</h4><p style="font-size:0.86rem;max-width:100%;opacity:0.75;">External presence, outreach programs, school visits, opportunity sharing.</p><div class="dept-card__tba">Director — TBA 2026–27</div></div>
-      <div class="dept-card up"><div class="dept-card__icon">📸</div><h4>Media &amp; Promotions</h4><p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Social media, content calendar, spotlights, digital storytelling.</p><div class="dept-card__tba">Director — TBA 2026–27</div></div>
-      <div class="dept-card up"><div class="dept-card__icon">🎨</div><h4>Design</h4><p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Visual identity, graphics, event materials, website assets, brand consistency.</p><div class="dept-card__tba">Director — TBA 2026–27</div></div>
-      <div class="dept-card up"><div class="dept-card__icon">🗂️</div><h4>Logistics &amp; HR</h4><p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Event logistics, member management, onboarding, internal operations.</p><div class="dept-card__tba">Director — TBA 2026–27</div></div>
+    <div id="teamGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;">
+      <!-- Populated by team.js -->
+    </div>
+    <div id="teamEmpty" style="display:none;text-align:center;padding:4rem 0;opacity:0.45;font-family:var(--font-mono);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;">
+      Members will appear here as they register.
     </div>
   </div>
 </section>
 
-<!-- JOIN CTA -->
-<section class="sec sec--ink">
-  <div class="wrap tc">
-    <h2 style="color:var(--white);">Want to be part of the team?</h2>
-    <p style="color:rgba(255,255,255,0.55);margin:1rem auto;max-width:46ch;">Positions are selected at the start of each academic year. Watch Instagram and LinkedIn for announcements.</p>
-    <div class="row" style="justify-content:center;margin-top:2rem;">
-      <a href="join.html" class="btn btn-butter">Join as Member ✦</a>
-      <a href="join.html#volunteer" class="btn btn-outline-light">Volunteer</a>
+<!-- DEPARTMENTS -->
+<section class="sec sec--off">
+  <div class="wrap">
+    <div class="sec-hd tc up" style="margin-bottom:2.5rem;">
+      <span class="label" style="display:block;margin-bottom:1rem;">Structure</span>
+      <h2>Directorates</h2>
+    </div>
+    <div class="g3">
+      <div class="dept-card up">
+        <div class="dept-card__icon">🔬</div>
+        <h4>Research &amp; Affiliations</h4>
+        <p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Research initiatives, competitions, academic partnerships, and faculty collaborations.</p>
+      </div>
+      <div class="dept-card up">
+        <div class="dept-card__icon">📢</div>
+        <h4>Marketing &amp; Outreach</h4>
+        <p style="font-size:0.86rem;max-width:100%;opacity:0.75;">External presence, outreach programmes, school visits, and opportunity sharing.</p>
+      </div>
+      <div class="dept-card up">
+        <div class="dept-card__icon">📸</div>
+        <h4>Media &amp; Promotions</h4>
+        <p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Social media, content calendar, spotlights, and digital storytelling.</p>
+      </div>
+      <div class="dept-card up">
+        <div class="dept-card__icon">🎨</div>
+        <h4>Design</h4>
+        <p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Visual identity, graphics, event materials, and brand consistency.</p>
+      </div>
+      <div class="dept-card up">
+        <div class="dept-card__icon">🗂️</div>
+        <h4>Logistics &amp; HR</h4>
+        <p style="font-size:0.86rem;max-width:100%;opacity:0.75;">Event logistics, member management, onboarding, and internal operations.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -107,14 +137,22 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer-top">
-      <div><div class="footer-logo">LWiSE ✦</div><div class="footer-tagline">LUMS Women in Science and Engineering</div><div class="footer-socials"><a href="#" class="footer-soc">📸</a><a href="#" class="footer-soc">💼</a><a href="mailto:lwise@lums.edu.pk" class="footer-soc">✉️</a></div></div>
+      <div>
+        <div class="footer-logo">
+          <img src="assets/images/lwise-logo.png" alt="LWiSE" class="footer-logo-img">
+          <span class="footer-logo-text">LWiSE</span>
+        </div>
+        <div class="footer-tagline">LUMS Women in Science and Engineering</div>
+        <div class="footer-socials"><a href="#" class="footer-soc">📸</a><a href="#" class="footer-soc">💼</a><a href="mailto:lwise@lums.edu.pk" class="footer-soc">✉️</a></div>
+      </div>
       <div><div class="footer-col-hd">Explore</div><a href="index.html#about" class="footer-link">About</a><a href="events.html" class="footer-link">Events</a><a href="research.html" class="footer-link">Research</a></div>
       <div><div class="footer-col-hd">Get Involved</div><a href="join.html" class="footer-link">Join</a><a href="members.html" class="footer-link">Members</a></div>
       <div><div class="footer-col-hd">Connect</div><a href="#" class="footer-link">Instagram</a><a href="mailto:lwise@lums.edu.pk" class="footer-link">Email</a></div>
     </div>
-    <div class="footer-bottom"><div class="footer-copy">© LWiSE 2026–27</div><div class="footer-mantra">EXPLORE · RESEARCH · CONNECT · LEAD</div></div>
+    <div class="footer-bottom"><div class="footer-copy">© LWiSE 2026–27</div><div class="footer-mantra">LUMS · LAHORE · PAKISTAN</div></div>
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/team.js"></script>
 </body>
 </html>
