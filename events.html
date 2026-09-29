@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — LWiSE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body>
+<div class="y2k-stars" id="y2kStars"></div>
+
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>LWiSE</a>
+    <ul class="nav__links">
+      <li><a href="index.html#about" class="nav__link">About</a></li>
+      <li><a href="events.html" class="nav__link">Events</a></li>
+      <li><a href="research.html" class="nav__link">Research</a></li>
+      <li><a href="opportunities.html" class="nav__link">Opportunities</a></li>
+      <li><a href="team.html" class="nav__link">Team</a></li>
+      <li><a href="members.html" class="nav__link">Members</a></li>
+    </ul>
+    <a href="join.html" class="btn btn--primary nav__cta" style="display:none;">Join LWiSE</a>
+    <button class="nav__hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <button class="nav__close" id="navClose">✕</button>
+  <a href="index.html#about" class="nav__link">About</a>
+  <a href="events.html" class="nav__link">Events</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="opportunities.html" class="nav__link">Opportunities</a>
+  <a href="team.html" class="nav__link">Team</a>
+  <a href="members.html" class="nav__link">Members</a>
+  <a href="join.html" class="btn btn--primary">Join LWiSE</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="eyebrow">Events &amp; Activities</span>
+      <h1>What We've Done</h1>
+      <p style="max-width:52ch;margin:1rem auto 0;opacity:0.8;">Workshops, research competitions, community gatherings, outreach, and STEM conversations. LWiSE is more than an events calendar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <!-- Filters -->
+    <div class="events__filter fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Research">Research</button>
+      <button class="filter-btn" data-filter="Workshop">Workshops</button>
+      <button class="filter-btn" data-filter="Community">Community</button>
+      <button class="filter-btn" data-filter="Outreach">Outreach</button>
+      <button class="filter-btn" data-filter="Representation">Representation</button>
+    </div>
+
+    <!-- Events list -->
+    <div style="display:flex;flex-direction:column;gap:var(--space-md);">
+      <div class="event-card fade-up" data-category="Community">
+        <div class="event-card__date"><div class="event-card__date-month">—</div><div class="event-card__date-day" style="font-size:1rem;">🎪</div><div class="event-card__date-year">2025</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Community · Recruitment</div>
+          <div class="event-card__title">LUMS Society Fair</div>
+          <div class="event-card__desc">LWiSE participated in the LUMS Society Fair to introduce the organization to new students and recruit members for the 2025–26 cohort.</div>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Community">
+        <div class="event-card__date"><div class="event-card__date-month">Oct</div><div class="event-card__date-day">29</div><div class="event-card__date-year">2025</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Community · Induction</div>
+          <div class="event-card__title">LWiSE Induction 2025</div>
+          <div class="event-card__desc">Official induction at Solos Café, with support from Tabdeeli Deli. A celebration of the new cohort joining the LWiSE community and the beginning of the 2025–26 chapter.</div>
+          <div style="margin-top:0.5rem;font-size:0.78rem;font-family:var(--font-mono);color:var(--lilac-dark);">📍 Solos Café · Sponsor: Tabdeeli Deli</div>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Community">
+        <div class="event-card__date"><div class="event-card__date-month">Nov</div><div class="event-card__date-day">12</div><div class="event-card__date-year">2025</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Community</div>
+          <div class="event-card__title">General Body Meeting</div>
+          <div class="event-card__desc">LWiSE's first General Body Meeting — members gathered to connect, discuss plans for the semester, and collectively shape the direction of the society.</div>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Workshop">
+        <div class="event-card__date"><div class="event-card__date-month">Feb</div><div class="event-card__date-day">12</div><div class="event-card__date-year">2026</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Workshop · Hands-on STEM</div>
+          <div class="event-card__title">Chemistry of Scent</div>
+          <div class="event-card__desc">A hands-on STEM workshop organized with STEAM Makers Edu, exploring the science of fragrance and perfume chemistry. The kind of practical, experiential STEM that LWiSE believes in.</div>
+          <div style="margin-top:0.5rem;font-size:0.78rem;font-family:var(--font-mono);color:var(--lilac-dark);">🤝 In collaboration with STEAM Makers Edu</div>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Representation">
+        <div class="event-card__date"><div class="event-card__date-month">2026</div><div class="event-card__date-day" style="font-size:1rem;">🎙️</div><div class="event-card__date-year">Talk</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Representation · Outreach</div>
+          <div class="event-card__title">STEM Conversations — Dr. Sarah Qureshi (T.I.) &amp; Sabeen Hamood</div>
+          <div class="event-card__desc">LWiSE hosted conversations with inspiring women in STEM, including Dr. Sarah Qureshi (T.I.) and Sabeen Hamood, offering members exposure to diverse career paths in science and engineering.</div>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Representation">
+        <div class="event-card__date"><div class="event-card__date-month">2026</div><div class="event-card__date-day" style="font-size:1rem;">✦</div><div class="event-card__date-year">Spotlight</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Representation · Interview</div>
+          <div class="event-card__title">Student Spotlight — Mirza Sarim Ahmed Beg</div>
+          <div class="event-card__desc">LWiSE interviewed Mirza Sarim Ahmed Beg (Physics '27 / SSP 2022) as part of its ongoing Women in STEM spotlight series — sharing diverse student journeys in STEM at LUMS.</div>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Research">
+        <div class="event-card__date"><div class="event-card__date-month">2026</div><div class="event-card__date-day" style="font-size:1rem;">📄</div><div class="event-card__date-year">National</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Research · Competition · National</div>
+          <div class="event-card__title">All-Women National Research Article Competition 2026</div>
+          <div class="event-card__desc">The flagship LWiSE initiative — organized with SBASSE and The Particle Magazine. 50+ applicants from across Pakistan. 30+ trained in research writing. 25 submissions. All-female evaluation panel. Closing symposium with cash prize and publication opportunity.</div>
+          <div style="margin-top:0.5rem;font-size:0.78rem;font-family:var(--font-mono);color:var(--lilac-dark);">🤝 LWiSE × SBASSE, LUMS × The Particle Magazine</div>
+          <a href="research.html" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="event-card fade-up" data-category="Representation">
+        <div class="event-card__date"><div class="event-card__date-month">2026</div><div class="event-card__date-day" style="font-size:1rem;">📰</div><div class="event-card__date-year">Publication</div></div>
+        <div class="event-card__body">
+          <div class="event-card__tag">Representation · Publication</div>
+          <div class="event-card__title">The Particle Magazine Collaboration &amp; Writer Meetup</div>
+          <div class="event-card__desc">6 LWiSE student writers featured. 2 articles published. A meetup was held with contributors including Madiha Rehman, Ayerah Asim, and Hazem Asif — celebrating scientific communication as a pathway for women in STEM.</div>
+          <div style="margin-top:0.5rem;font-size:0.78rem;font-family:var(--font-mono);color:var(--lilac-dark);">🤝 LWiSE × The Particle Magazine</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section join-section">
+  <div class="container" style="text-align:center;position:relative;z-index:1;">
+    <span class="eyebrow" style="color:var(--blush);">Stay Connected</span>
+    <h2 style="color:var(--cream);">Don't miss what's next.</h2>
+    <p style="color:rgba(255,255,255,0.65);margin:1rem auto;max-width:44ch;">Follow LWiSE on Instagram and LinkedIn for upcoming events, opportunities, and community updates.</p>
+    <div class="btn-row" style="justify-content:center;">
+      <a href="join.html" class="btn btn--cream">Join LWiSE ✦</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">LWiSE ✦</div>
+        <div class="footer__tagline">LUMS Women in Science and Engineering</div>
+        <div class="footer__socials"><a href="#" class="footer__social">📸</a><a href="#" class="footer__social">💼</a><a href="mailto:lwise@lums.edu.pk" class="footer__social">✉️</a></div>
+      </div>
+      <div><div class="footer__col-header">Explore</div><a href="index.html#about" class="footer__link">About</a><a href="events.html" class="footer__link">Events</a><a href="research.html" class="footer__link">Research</a></div>
+      <div><div class="footer__col-header">Get Involved</div><a href="join.html" class="footer__link">Join</a><a href="members.html" class="footer__link">Members</a></div>
+      <div><div class="footer__col-header">Connect</div><a href="#" class="footer__link">Instagram</a><a href="mailto:lwise@lums.edu.pk" class="footer__link">Email</a></div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">© LWiSE 2026–27</div>
+      <div class="footer__y2k">✦ EXPLORE · RESEARCH · CONNECT · LEAD ✦</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', initEventFilter);</script>
+</body>
+</html>

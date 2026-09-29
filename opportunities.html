@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunities — LWiSE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body>
+<div class="y2k-stars" id="y2kStars"></div>
+
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>LWiSE</a>
+    <ul class="nav__links">
+      <li><a href="index.html#about" class="nav__link">About</a></li>
+      <li><a href="events.html" class="nav__link">Events</a></li>
+      <li><a href="research.html" class="nav__link">Research</a></li>
+      <li><a href="opportunities.html" class="nav__link">Opportunities</a></li>
+      <li><a href="team.html" class="nav__link">Team</a></li>
+      <li><a href="members.html" class="nav__link">Members</a></li>
+    </ul>
+    <a href="join.html" class="btn btn--primary nav__cta" style="display:none;">Join LWiSE</a>
+    <button class="nav__hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <button class="nav__close" id="navClose">✕</button>
+  <a href="index.html#about" class="nav__link">About</a>
+  <a href="events.html" class="nav__link">Events</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="opportunities.html" class="nav__link">Opportunities</a>
+  <a href="team.html" class="nav__link">Team</a>
+  <a href="members.html" class="nav__link">Members</a>
+  <a href="join.html" class="btn btn--primary">Join LWiSE</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="eyebrow">Opportunity Hub</span>
+      <h1>Find Your Next Opportunity</h1>
+      <p style="max-width:56ch;margin:1rem auto 0;opacity:0.8;">LWiSE curates research opportunities, internships, scholarships, fellowships, competitions, and courses for women in STEM.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <!-- Category filters -->
+    <div class="events__filter fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Research">Research</button>
+      <button class="filter-btn" data-filter="Internship">Internships</button>
+      <button class="filter-btn" data-filter="Scholarship">Scholarships</button>
+      <button class="filter-btn" data-filter="Fellowship">Fellowships</button>
+      <button class="filter-btn" data-filter="Competition">Competitions</button>
+      <button class="filter-btn" data-filter="Course">Courses</button>
+      <button class="filter-btn" data-filter="Conference">Conferences</button>
+    </div>
+
+    <!-- Opportunities grid -->
+    <div class="grid-3" id="oppsGrid" style="margin-top:var(--space-xl);">
+
+      <div class="opp-card fade-up" data-category="Research">
+        <div class="opp-card__header">
+          <div>
+            <span class="y2k-badge y2k-badge--plum">Research</span>
+          </div>
+          <span style="font-size:1.5rem;">🔬</span>
+        </div>
+        <div class="opp-card__body">
+          <div class="opp-card__title">LUMS SBASSE Summer Research Program</div>
+          <div class="opp-card__org">Syed Babar Ali School of Science &amp; Engineering</div>
+          <div class="opp-card__meta">
+            <span class="opp-meta-tag">Undergraduate</span>
+            <span class="opp-meta-tag">LUMS</span>
+            <span class="opp-meta-tag">Summer</span>
+          </div>
+          <div class="opp-card__deadline">🗓️ Check SBASSE website for current deadlines</div>
+          <a href="https://lums.edu.pk" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;padding:0.5rem 1rem;">Apply →</a>
+        </div>
+      </div>
+
+      <div class="opp-card fade-up" data-category="Scholarship">
+        <div class="opp-card__header">
+          <div><span class="y2k-badge y2k-badge--butter">Scholarship</span></div>
+          <span style="font-size:1.5rem;">🎓</span>
+        </div>
+        <div class="opp-card__body">
+          <div class="opp-card__title">Higher Education Commission (HEC) Scholarships</div>
+          <div class="opp-card__org">Higher Education Commission Pakistan</div>
+          <div class="opp-card__meta">
+            <span class="opp-meta-tag">National</span>
+            <span class="opp-meta-tag">Multiple fields</span>
+            <span class="opp-meta-tag">Funded</span>
+          </div>
+          <div class="opp-card__deadline">🗓️ Rolling deadlines — check HEC portal</div>
+          <a href="https://hec.gov.pk/english/scholarshipsgrants/Pages/HEC-Scholarship.aspx" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;padding:0.5rem 1rem;">Explore →</a>
+        </div>
+      </div>
+
+      <div class="opp-card fade-up" data-category="Fellowship">
+        <div class="opp-card__header">
+          <div><span class="y2k-badge y2k-badge--lilac">Fellowship</span></div>
+          <span style="font-size:1.5rem;">✦</span>
+        </div>
+        <div class="opp-card__body">
+          <div class="opp-card__title">Women in STEM Fellowships Database</div>
+          <div class="opp-card__org">International Organizations</div>
+          <div class="opp-card__meta">
+            <span class="opp-meta-tag">International</span>
+            <span class="opp-meta-tag">STEM</span>
+            <span class="opp-meta-tag">Fully funded</span>
+          </div>
+          <div class="opp-card__deadline">🗓️ Shared regularly on LWiSE's Instagram &amp; LinkedIn</div>
+          <a href="join.html" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;padding:0.5rem 1rem;">Join LWiSE to stay updated →</a>
+        </div>
+      </div>
+
+      <div class="opp-card fade-up" data-category="Course">
+        <div class="opp-card__header">
+          <div><span class="y2k-badge y2k-badge--blush">Course</span></div>
+          <span style="font-size:1.5rem;">💻</span>
+        </div>
+        <div class="opp-card__body">
+          <div class="opp-card__title">Stanford Code in Place</div>
+          <div class="opp-card__org">Stanford University</div>
+          <div class="opp-card__meta">
+            <span class="opp-meta-tag">Free</span>
+            <span class="opp-meta-tag">Python</span>
+            <span class="opp-meta-tag">Beginners</span>
+          </div>
+          <div class="opp-card__deadline">🗓️ Annual — check website for next cohort</div>
+          <a href="https://codeinplace.stanford.edu/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;padding:0.5rem 1rem;">Apply →</a>
+        </div>
+      </div>
+
+      <div class="opp-card fade-up" data-category="Course">
+        <div class="opp-card__header">
+          <div><span class="y2k-badge y2k-badge--blush">Course</span></div>
+          <span style="font-size:1.5rem;">📚</span>
+        </div>
+        <div class="opp-card__body">
+          <div class="opp-card__title">MIT OpenCourseWare</div>
+          <div class="opp-card__org">Massachusetts Institute of Technology</div>
+          <div class="opp-card__meta">
+            <span class="opp-meta-tag">Free</span>
+            <span class="opp-meta-tag">All STEM fields</span>
+            <span class="opp-meta-tag">Self-paced</span>
+          </div>
+          <div class="opp-card__deadline">🗓️ Always available — no deadline</div>
+          <a href="https://ocw.mit.edu/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;padding:0.5rem 1rem;">Explore →</a>
+        </div>
+      </div>
+
+      <div class="opp-card fade-up" data-category="Competition">
+        <div class="opp-card__header">
+          <div><span class="y2k-badge y2k-badge--butter">Competition</span></div>
+          <span style="font-size:1.5rem;">🏆</span>
+        </div>
+        <div class="opp-card__body">
+          <div class="opp-card__title">All-Women National Research Article Competition</div>
+          <div class="opp-card__org">LWiSE × SBASSE × The Particle</div>
+          <div class="opp-card__meta">
+            <span class="opp-meta-tag">National</span>
+            <span class="opp-meta-tag">Open to all women</span>
+            <span class="opp-meta-tag">Training provided</span>
+          </div>
+          <div class="opp-card__deadline">🗓️ Annual — watch for 2027 announcement</div>
+          <a href="research.html" class="btn btn--outline" style="margin-top:var(--space-md);font-size:0.8rem;padding:0.5rem 1rem;">Learn More →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card fade-up" style="margin-top:var(--space-2xl);background:var(--plum);border:none;text-align:center;padding:var(--space-2xl);">
+      <span class="eyebrow" style="color:var(--blush);">More opportunities</span>
+      <h3 style="color:var(--cream);margin-top:0.5rem;">LWiSE shares opportunities regularly.</h3>
+      <p style="color:rgba(255,255,255,0.65);margin:1rem auto;max-width:48ch;">Internships, scholarships, conferences, fellowships, and competitions are shared via LWiSE's Instagram and LinkedIn. Join the community to stay updated.</p>
+      <div class="btn-row" style="justify-content:center;margin-top:var(--space-xl);">
+        <a href="join.html" class="btn btn--cream">Join LWiSE ✦</a>
+        <a href="#" class="btn btn--ghost">Follow on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">LWiSE ✦</div>
+        <div class="footer__tagline">LUMS Women in Science and Engineering</div>
+        <div class="footer__socials"><a href="#" class="footer__social">📸</a><a href="#" class="footer__social">💼</a><a href="mailto:lwise@lums.edu.pk" class="footer__social">✉️</a></div>
+      </div>
+      <div><div class="footer__col-header">Explore</div><a href="index.html#about" class="footer__link">About</a><a href="events.html" class="footer__link">Events</a><a href="research.html" class="footer__link">Research</a></div>
+      <div><div class="footer__col-header">Get Involved</div><a href="join.html" class="footer__link">Join</a><a href="members.html" class="footer__link">Members</a></div>
+      <div><div class="footer__col-header">Connect</div><a href="#" class="footer__link">Instagram</a><a href="mailto:lwise@lums.edu.pk" class="footer__link">Email</a></div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">© LWiSE 2026–27</div>
+      <div class="footer__y2k">✦ EXPLORE · RESEARCH · CONNECT · LEAD ✦</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', initEventFilter);</script>
+</body>
+</html>

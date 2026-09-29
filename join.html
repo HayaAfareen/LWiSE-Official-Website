@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join LWiSE — LUMS Women in Science and Engineering</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body>
+
+<div class="y2k-stars" id="y2kStars"></div>
+
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>LWiSE</a>
+    <ul class="nav__links">
+      <li><a href="index.html#about" class="nav__link">About</a></li>
+      <li><a href="events.html" class="nav__link">Events</a></li>
+      <li><a href="research.html" class="nav__link">Research</a></li>
+      <li><a href="opportunities.html" class="nav__link">Opportunities</a></li>
+      <li><a href="team.html" class="nav__link">Team</a></li>
+      <li><a href="members.html" class="nav__link">Members</a></li>
+    </ul>
+    <a href="join.html" class="btn btn--primary nav__cta" style="display:none;">Join LWiSE</a>
+    <button class="nav__hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <button class="nav__close" id="navClose">✕</button>
+  <a href="index.html#about" class="nav__link">About</a>
+  <a href="events.html" class="nav__link">Events</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="opportunities.html" class="nav__link">Opportunities</a>
+  <a href="team.html" class="nav__link">Team</a>
+  <a href="members.html" class="nav__link">Members</a>
+  <a href="join.html" class="btn btn--primary">Join LWiSE</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="eyebrow">Get Involved</span>
+      <h1>Join LWiSE</h1>
+      <p style="max-width:52ch;margin:1rem auto 0;font-size:1.1rem;opacity:0.8;">
+        Curious about STEM? You're already in the right place. Fill in the form below and become part of the LWiSE community.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN OPTIONS -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="grid-4" style="margin-bottom:var(--space-3xl);">
+      <a href="#member-form" class="join-option fade-up" style="background:var(--white);border:1.5px solid var(--blush);text-decoration:none;border-radius:var(--radius-lg);padding:var(--space-xl);text-align:center;display:block;transition:all 0.3s var(--ease);" id="tab-member">
+        <span class="join-option__icon" style="color:var(--plum);">💜</span>
+        <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--plum);margin-bottom:0.4rem;">Become a Member</div>
+        <p style="font-size:0.84rem;color:var(--charcoal);opacity:0.7;max-width:100%;">Join as a LUMS student or general member.</p>
+      </a>
+      <a href="#collaborate" class="join-option fade-up" style="background:var(--white);border:1.5px solid var(--blush);text-decoration:none;border-radius:var(--radius-lg);padding:var(--space-xl);text-align:center;display:block;" id="tab-collab">
+        <span class="join-option__icon" style="color:var(--plum);">🔬</span>
+        <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--plum);margin-bottom:0.4rem;">Collaborate</div>
+        <p style="font-size:0.84rem;color:var(--charcoal);opacity:0.7;max-width:100%;">Researchers, academics & organizations.</p>
+      </a>
+      <a href="#partner" class="join-option fade-up" style="background:var(--white);border:1.5px solid var(--blush);text-decoration:none;border-radius:var(--radius-lg);padding:var(--space-xl);text-align:center;display:block;" id="tab-partner">
+        <span class="join-option__icon" style="color:var(--plum);">🤝</span>
+        <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--plum);margin-bottom:0.4rem;">Partner</div>
+        <p style="font-size:0.84rem;color:var(--charcoal);opacity:0.7;max-width:100%;">Support STEM programs for women.</p>
+      </a>
+      <a href="#volunteer" class="join-option fade-up" style="background:var(--white);border:1.5px solid var(--blush);text-decoration:none;border-radius:var(--radius-lg);padding:var(--space-xl);text-align:center;display:block;" id="tab-vol">
+        <span class="join-option__icon" style="color:var(--plum);">✦</span>
+        <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--plum);margin-bottom:0.4rem;">Volunteer</div>
+        <p style="font-size:0.84rem;color:var(--charcoal);opacity:0.7;max-width:100%;">Help create events & resources.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── MEMBERSHIP FORM ────────────────────────────────────── -->
+<section class="section form-section" id="member-form">
+  <div class="container">
+    <div class="section-header text-center fade-up" style="margin-bottom:var(--space-2xl);">
+      <span class="eyebrow">Membership Form</span>
+      <h2>Become a LWiSE member</h2>
+      <p style="margin:auto;margin-top:1rem;">All information is kept private and used only for LWiSE community records. Membership is open to all women interested in STEM.</p>
+    </div>
+    <div class="form-card fade-up">
+      <div class="form-card__header">
+        <span class="eyebrow" style="color:var(--blush);">2026–27 Cohort</span>
+        <h3 style="color:var(--cream);margin-top:0.25rem;">LWiSE Membership Registration</h3>
+      </div>
+      <div class="form-card__body">
+        <form id="membershipForm" novalidate>
+          <!-- personal info -->
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name <span>*</span></label>
+              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Ayesha" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name <span>*</span></label>
+              <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Khan" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span>*</span></label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="ayesha.khan@lums.edu.pk" required>
+            <div class="form-hint">LUMS email preferred for current students, otherwise any email works.</div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone / WhatsApp</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+92 300 0000000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="memberType">Membership Type <span>*</span></label>
+              <select class="form-select" id="memberType" name="memberType" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="LUMS Student">LUMS Student</option>
+                <option value="LUMS Alumni">LUMS Alumni</option>
+                <option value="Other University Student">Other University Student</option>
+                <option value="High School Student">High School Student</option>
+                <option value="Professional / Researcher">Professional / Researcher</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- academic info -->
+          <hr style="border:none;border-top:1px solid rgba(74,49,88,0.1);margin:var(--space-xl) 0;">
+          <h4 style="color:var(--plum);margin-bottom:var(--space-lg);">Academic Background</h4>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="institution">Institution / University</label>
+              <input class="form-input" type="text" id="institution" name="institution" placeholder="LUMS">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="department">Department / School <span>*</span></label>
+              <select class="form-select" id="department" name="department" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="SBASSE">SBASSE — Science &amp; Engineering</option>
+                <option value="SDSB">SDSB — Business</option>
+                <option value="SAHSOL">SAHSOL — Humanities &amp; Social Sciences</option>
+                <option value="SOE">SOE — Education</option>
+                <option value="Other Department">Other LUMS Department</option>
+                <option value="Other Institution">Other Institution</option>
+                <option value="N/A">Not Applicable</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="major">Major / Field of Study</label>
+              <input class="form-input" type="text" id="major" name="major" placeholder="Computer Science, Biology, Physics...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="yearOfStudy">Year of Study</label>
+              <select class="form-select" id="yearOfStudy" name="yearOfStudy">
+                <option value="" disabled selected>Select...</option>
+                <option value="Year 1">Year 1</option>
+                <option value="Year 2">Year 2</option>
+                <option value="Year 3">Year 3</option>
+                <option value="Year 4">Year 4</option>
+                <option value="Year 5+">Year 5+</option>
+                <option value="Graduate">Graduate / Masters / PhD</option>
+                <option value="Alumni">Alumni</option>
+                <option value="Professional">Professional</option>
+                <option value="High School">High School</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- interests -->
+          <hr style="border:none;border-top:1px solid rgba(74,49,88,0.1);margin:var(--space-xl) 0;">
+          <h4 style="color:var(--plum);margin-bottom:var(--space-lg);">STEM Interests &amp; Involvement</h4>
+          <div class="form-group">
+            <label class="form-label">STEM Fields of Interest <span>*</span></label>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem;" id="stemFields">
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Biology" style="margin-right:0.3rem;">Biology</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Chemistry" style="margin-right:0.3rem;">Chemistry</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Physics" style="margin-right:0.3rem;">Physics</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Mathematics" style="margin-right:0.3rem;">Mathematics</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Computer Science" style="margin-right:0.3rem;">Computer Science</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Engineering" style="margin-right:0.3rem;">Engineering</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Data Science" style="margin-right:0.3rem;">Data Science</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Biotechnology" style="margin-right:0.3rem;">Biotechnology</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Environmental Science" style="margin-right:0.3rem;">Environmental Sci</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Interdisciplinary" style="margin-right:0.3rem;">Interdisciplinary</label>
+              <label style="cursor:pointer;"><input type="checkbox" name="stemFields" value="Other" style="margin-right:0.3rem;">Other</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lwiseInterest">What draws you to LWiSE? <span>*</span></label>
+            <select class="form-select" id="lwiseInterest" name="lwiseInterest" required>
+              <option value="" disabled selected>Select primary interest...</option>
+              <option value="Research Opportunities">Research Opportunities</option>
+              <option value="Community &amp; Networking">Community &amp; Networking</option>
+              <option value="Professional Development">Professional Development</option>
+              <option value="Mentorship">Mentorship</option>
+              <option value="Workshops &amp; Events">Workshops &amp; Events</option>
+              <option value="Opportunities (internships/scholarships)">Opportunities Hub</option>
+              <option value="Scientific Writing &amp; Publication">Scientific Writing &amp; Publication</option>
+              <option value="Outreach">Outreach</option>
+              <option value="All of the above">All of the above</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="howHeard">How did you hear about LWiSE?</label>
+            <select class="form-select" id="howHeard" name="howHeard">
+              <option value="" disabled selected>Select...</option>
+              <option value="Instagram">Instagram</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Friend / Peer">Friend / Peer</option>
+              <option value="LUMS Society Fair">LUMS Society Fair</option>
+              <option value="Class / Professor">Class / Professor</option>
+              <option value="LWiSE Event">LWiSE Event</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bio">Brief Introduction (optional)</label>
+            <textarea class="form-textarea" id="bio" name="bio" placeholder="Tell us a little about yourself, your interests, and what you hope to get from LWiSE..." style="min-height:80px;"></textarea>
+          </div>
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:0.6rem;cursor:pointer;font-size:0.86rem;color:var(--charcoal);">
+              <input type="checkbox" name="consent" id="consent" required style="margin-top:3px;flex-shrink:0;">
+              <span>I agree that my information may be stored in LWiSE's member records and displayed in the members' directory on the LWiSE website (visible to logged-in admins). <span style="color:var(--rose);">*</span></span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem;" id="submitBtn">
+            Join LWiSE ✦
+          </button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success__icon">🎉</div>
+          <h3>Welcome to LWiSE!</h3>
+          <p style="margin:0.5rem auto 0;max-width:40ch;">Your registration is confirmed. We'll be in touch soon. Explore, research, connect, and lead. ✦</p>
+          <a href="members.html" class="btn btn--primary" style="margin-top:1.5rem;">View Members Directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COLLABORATE ────────────────────────────────────────── -->
+<section class="section section--cream" id="collaborate">
+  <div class="container" style="max-width:700px;">
+    <div class="section-header fade-up">
+      <span class="eyebrow">Collaborate</span>
+      <h2>Work with LWiSE</h2>
+      <p style="margin-top:1rem;">Researchers, academics, and organizations can collaborate with LWiSE on research initiatives, workshops, mentorship, and events.</p>
+    </div>
+    <div class="form-card fade-up">
+      <div class="form-card__header">
+        <h3 style="color:var(--cream);">Collaboration Inquiry</h3>
+      </div>
+      <div class="form-card__body">
+        <form id="collabForm" novalidate>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="cName">Your Name <span>*</span></label>
+              <input class="form-input" type="text" id="cName" name="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cOrg">Organization / Institution <span>*</span></label>
+              <input class="form-input" type="text" id="cOrg" name="org" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cEmail">Email <span>*</span></label>
+            <input class="form-input" type="email" id="cEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cType">Type of Collaboration <span>*</span></label>
+            <select class="form-select" id="cType" name="collabType" required>
+              <option value="" disabled selected>Select...</option>
+              <option value="Research Partnership">Research Partnership</option>
+              <option value="Workshop / Event">Workshop / Event</option>
+              <option value="Mentorship Program">Mentorship Program</option>
+              <option value="Sponsorship">Sponsorship / Funding</option>
+              <option value="Media / Publication">Media / Publication</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cMsg">Tell us more <span>*</span></label>
+            <textarea class="form-textarea" id="cMsg" name="message" placeholder="Describe the collaboration you have in mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem;">
+            Send Inquiry ✦
+          </button>
+        </form>
+        <div class="form-success" id="collabSuccess">
+          <div class="form-success__icon">✦</div>
+          <h3>Thank you!</h3>
+          <p style="margin:0.5rem auto 0;max-width:40ch;">We've received your inquiry and will get back to you soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARTNER / VOLUNTEER ANCHORS ───────────────────────── -->
+<section class="section" style="background:var(--blush);" id="partner">
+  <div class="container" style="max-width:700px;">
+    <div class="fade-up">
+      <span class="eyebrow">Partner With Us</span>
+      <h2>Support women in STEM</h2>
+      <p style="margin-top:1rem;">If you represent an organization interested in supporting LWiSE's programs, research competitions, outreach, or scholarship opportunities, we'd love to hear from you.</p>
+      <p style="margin-top:0.5rem;">Please reach out directly at <a href="mailto:lwise@lums.edu.pk" style="color:var(--plum);font-weight:600;">lwise@lums.edu.pk</a> with the subject line "<strong>Partnership Inquiry</strong>".</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream" id="volunteer">
+  <div class="container" style="max-width:700px;">
+    <div class="fade-up">
+      <span class="eyebrow">Volunteer</span>
+      <h2>Help build the ecosystem</h2>
+      <p style="margin-top:1rem;">We're always looking for enthusiastic people to help organize events, create content, run outreach programs, and build resources. Volunteers can be from LUMS or beyond.</p>
+      <p style="margin-top:0.5rem;">Fill out the <a href="#member-form" style="color:var(--plum);font-weight:600;">membership form above</a> and note your interest in volunteering in the introduction field.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">LWiSE ✦</div>
+        <div class="footer__tagline">LUMS Women in Science and Engineering<br>Building pathways for women in STEM.</div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social">📸</a>
+          <a href="#" class="footer__social">💼</a>
+          <a href="mailto:lwise@lums.edu.pk" class="footer__social">✉️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-header">Explore</div>
+        <a href="index.html#about" class="footer__link">About LWiSE</a>
+        <a href="team.html" class="footer__link">Team</a>
+        <a href="events.html" class="footer__link">Events</a>
+        <a href="research.html" class="footer__link">Research</a>
+      </div>
+      <div>
+        <div class="footer__col-header">Get Involved</div>
+        <a href="join.html" class="footer__link">Join</a>
+        <a href="join.html#collaborate" class="footer__link">Collaborate</a>
+        <a href="join.html#partner" class="footer__link">Partner</a>
+        <a href="members.html" class="footer__link">Members</a>
+      </div>
+      <div>
+        <div class="footer__col-header">Connect</div>
+        <a href="#" class="footer__link">Instagram</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="mailto:lwise@lums.edu.pk" class="footer__link">Email Us</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">© LWiSE 2026–27 · LUMS Women in Science and Engineering</div>
+      <div class="footer__y2k">✦ EXPLORE · RESEARCH · CONNECT · LEAD ✦</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>
